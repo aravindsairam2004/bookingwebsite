@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Hotel - Book Your Stay</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Urban Hotel</div>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="#rooms">Rooms</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+            <!-- Add Font Awesome for icons -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Urban Hotel</h1>
+            <p>Experience luxury and comfort at its finest</p>
+            <a href="#booking" class="cta-button">Book Now</a>
+        </div>
+    </section>
+
+    <section id="booking" class="booking-section">
+        <h2>Book Your Stay</h2>
+        <div class="booking-form">
+            <form action="payment.html" method="GET">
+                <div class="form-group">
+                    <label for="check-in">Check-in Date:</label>
+                    <input type="date" id="check-in" name="check-in" required>
+                </div>
+                <div class="form-group">
+                    <label for="check-out">Check-out Date:</label>
+                    <input type="date" id="check-out" name="check-out" required>
+                </div>
+                <div class="form-group">
+                    <label for="guests">Number of Guests:</label>
+                    <select id="guests" name="guests" required>
+                        <option value="1">1 Guest</option>
+                        <option value="2">2 Guests</option>
+                        <option value="3">3 Guests</option>
+                        <option value="4">4 Guests</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="room-type">Room Type:</label>
+                    <select id="room-type" name="room-type" required>
+                        <option value="standard">Standard Room</option>
+                        <option value="deluxe">Deluxe Room</option>
+                        <option value="suite">Executive Suite</option>
+                    </select>
+                </div>
+                <button type="submit" class="submit-button">Proceed to Payment</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="rooms" class="rooms-section">
+        <h2>Our Rooms</h2>
+        <div class="room-cards">
+            <div class="room-card">
+                <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=800&h=500" alt="Standard Room">
+                <div class="room-info">
+                    <h3>Standard Room</h3>
+                    <p>Perfect for solo travelers or couples</p>
+                    <p class="price">$99/night</p>
+                    <a href="#booking" class="room-book-btn" onclick="document.getElementById('room-type').value='standard';">Book Now</a>
+                </div>
+            </div>
+            <div class="room-card">
+                <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=800&h=500" alt="Deluxe Room">
+                <div class="room-info">
+                    <h3>Deluxe Room</h3>
+                    <p>Spacious room with city view</p>
+                    <p class="price">$149/night</p>
+                    <a href="#booking" class="room-book-btn" onclick="document.getElementById('room-type').value='deluxe';">Book Now</a>
+                </div>
+            </div>
+            <div class="room-card">
+                <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&h=500" alt="Executive Suite">
+                <div class="room-info">
+                    <h3>Executive Suite</h3>
+                    <p>Luxury suite with all amenities</p>
+                    <p class="price">$199/night</p>
+                    <a href="#booking" class="room-book-btn" onclick="document.getElementById('room-type').value='suite';">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>123 Hotel Street</p>
+                <p>City, Country</p>
+                <p>Phone: +1 234 567 890</p>
+                <p>Email: info@urbanhotel.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#rooms">Rooms</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Urban Hotel. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
